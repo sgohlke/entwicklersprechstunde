@@ -9,6 +9,7 @@
     <body>
         <div id="readme"></div>
         <script>
+            console.info('Getting readme.md file')
             const readmeMd = await fetch('https://raw.githubusercontent.com/sgohlke/entwicklersprechstunde/main/README.md');
             const converter = new showdown.Converter();
             const readmeText = converter.makeHtml(readmeMd);
